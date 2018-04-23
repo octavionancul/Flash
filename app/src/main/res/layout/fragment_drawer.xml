@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+                   android:paddingBottom="8dp"
+    tools:context=".DrawerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/avatarCi"
+        android:layout_marginTop="54dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/logo"
+        app:siBorderWidth="6dp"
+        app:siBorderColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/emailTv"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="useer@mail.com" />
+
+    <View
+       
+        android:background="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+            android:layout_height="1dp"
+        />
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+       <TextView
+           android:id="@+id/logoutTv"
+           android:background="?attr/selectableItemBackground"
+           android:clickable="true"
+           android:text="Cerrar Sesión"
+         android:paddingRight="16dp"
+           android:textColor="@android:color/white"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+        
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

@@ -19,7 +19,13 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        android:background="@drawable/side_nav_bar"
+       >
+        <fragment
+            android:id="@+id/drawerFragment"
+            android:name="cl.octavionancul.flash.DrawerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></fragment>
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
