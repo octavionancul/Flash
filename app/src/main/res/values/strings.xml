@@ -16,4 +16,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="twitter_consumer_key" translatable="false">GvcWInb8lwUNGyUtuhCLlCynL</string>
+    <string name="twitter_consumer_secret" translatable="false">hGiU5WM6knigzh1hQjlB3obhyVMa4r4wl0dGGammzHra1uLGcT</string>
 </resources>
