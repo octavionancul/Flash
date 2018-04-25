@@ -1,4 +1,4 @@
-package cl.octavionancul.flash;
+package cl.octavionancul.flash.views.main.drawer;
 
 
 import android.content.Intent;
@@ -14,6 +14,10 @@ import android.widget.TextView;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+
+import cl.octavionancul.flash.R;
+import cl.octavionancul.flash.data.CurrentUser;
+import cl.octavionancul.flash.views.login.LoginActivity;
 
 
 /**

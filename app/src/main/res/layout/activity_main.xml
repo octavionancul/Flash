@@ -23,7 +23,7 @@
        >
         <fragment
             android:id="@+id/drawerFragment"
-            android:name="cl.octavionancul.flash.DrawerFragment"
+            android:name="cl.octavionancul.flash.views.main.drawer.DrawerFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></fragment>
     </android.support.design.widget.NavigationView>
