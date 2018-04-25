@@ -15,7 +15,7 @@ public class LoginEvaluator {
         if(new CurrentUser().getCurrentUser()!=null){
            callback.logged();
         }else{
-            callback.signUp();
+           callback.signUp();
         }
 
     }

@@ -23,18 +23,15 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_login);
 
         new LoginEvaluator(this).loginEvaluator();
-
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if(RC_SIGN_IN==requestCode){
+        if(RC_SIGN_IN == requestCode){
             if(resultCode== RESULT_OK){
                 logged();
             }
