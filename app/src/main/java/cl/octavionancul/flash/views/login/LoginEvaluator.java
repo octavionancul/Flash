@@ -10,7 +10,7 @@ public class LoginEvaluator {
 
     private LoginCallback callback;
 
-    public void loginEvaluator(){
+    public void evaluate(){
 
         if(new CurrentUser().getCurrentUser()!=null){
            callback.logged();
