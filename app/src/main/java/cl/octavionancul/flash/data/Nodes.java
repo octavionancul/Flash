@@ -14,4 +14,12 @@ public DatabaseReference users(){
 public DatabaseReference user(String key){
 return  users().child(key);
 }
+
+public DatabaseReference chats(){
+    return root.child("chats");
+}
+
+public DatabaseReference userChat(String uid) {
+    return chats().child(uid);
+}
 }

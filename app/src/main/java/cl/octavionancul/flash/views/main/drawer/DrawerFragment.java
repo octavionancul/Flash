@@ -122,10 +122,10 @@ public class DrawerFragment extends Fragment implements PhotoCallback {
 
     private void requestPhoto() {
 
-        new AlertDialog.Builder(getActivity()).setTitle("Selfie")
+        new AlertDialog.Builder(getActivity()).setTitle("Foto")
                 .setMessage("Para completar el registro debes tener una foto actualizada")
                 .setCancelable(false)
-                .setPositiveButton("Selfie", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         magicalCamera.takeFragmentPhoto(DrawerFragment.this);

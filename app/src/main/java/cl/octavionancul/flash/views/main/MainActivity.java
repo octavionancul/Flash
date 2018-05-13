@@ -3,6 +3,9 @@ package cl.octavionancul.flash.views.main;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import cl.octavionancul.flash.R;
+import cl.octavionancul.flash.views.main.finder.FinderDialogFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,8 +32,17 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                //This is what you are looking for
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                Fragment prev = getSupportFragmentManager().findFragmentByTag("finder");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+
+                DialogFragment dialogFragment = FinderDialogFragment.newInstance();
+                dialogFragment.show(ft, "finder");
             }
         });
 

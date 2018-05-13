@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
+
+    <EditText
+        android:inputType="textEmailAddress"
+        android:id="@+id/userInputEt"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:hint="Busca por email"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:src="@mipmap/baseline_send_white_24"
+        android:scaleType="centerCrop"
+        android:id="@+id/sendBtn"
+       android:theme="@style/AccentButton"
+        android:layout_width="52dp"
+        android:layout_height="52dp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:visibility="gone"
+        android:id="@+id/loadingSkv"
+        style="@style/SpinKitView.Large.FoldingCube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:SpinKit_Color="@android:color/white" />
+</LinearLayout>

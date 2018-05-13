@@ -10,6 +10,8 @@ public class CurrentUser {
     public FirebaseUser getCurrentUser() {
         return currentUser;
     }
+
+
     public String uid(){
         return currentUser.getUid();
     }
@@ -18,7 +20,6 @@ public class CurrentUser {
         return getCurrentUser().getEmail();
     }
 
-    public String sanitizeEmail(String email){
-        return email.replace("@","AT").replace(".","DOT");
-    }
+
+
 }

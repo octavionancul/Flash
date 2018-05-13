@@ -41,23 +41,23 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
                logged();
 
             }else {
-              //  new LoginEvaluator(this).evaluate();
-                Log.d("login", String.valueOf(response.getError()));
-                if (resultCode==RESULT_CANCELED){
-                    Toast.makeText(this, "Cancelado", Toast.LENGTH_SHORT).show();
-                }
-
-                // Sign in failed
+// Sign in failed
                 if (response == null) {
                     // User pressed back button
-                    Toast.makeText(this, "Presionado atras", Toast.LENGTH_SHORT).show();
+                    // showSnackbar(R.string.sign_in_cancelled);
+                    Toast.makeText(this, "cancelado", Toast.LENGTH_SHORT).show();
+                   // finish();
                     return;
                 }
 
                 if (response.getError().getErrorCode() == ErrorCodes.NO_NETWORK) {
-                    Toast.makeText(this, "Sin internet", Toast.LENGTH_SHORT).show();
+                    //  showSnackbar(R.string.no_internet_connection);
+                    Toast.makeText(this, "sin internet", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                Toast.makeText(this, "error desconocido", Toast.LENGTH_SHORT).show();
+                //showSnackbar(R.string.unknown_error);
+                // Log.e(TAG, "Sign-in error: ", response.getError());
 
             }
         }

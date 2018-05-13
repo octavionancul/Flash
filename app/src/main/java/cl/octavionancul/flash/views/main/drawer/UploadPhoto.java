@@ -4,11 +4,13 @@ import android.content.Context;
 import android.net.Uri;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import cl.octavionancul.flash.data.CurrentUser;
+import cl.octavionancul.flash.data.EmailProcessor;
 import cl.octavionancul.flash.data.Nodes;
 import cl.octavionancul.flash.data.PhotoPreference;
 import cl.octavionancul.flash.models.LocalUser;
@@ -24,8 +26,9 @@ public class UploadPhoto {
     public void toFirebase(String path){
 
         final CurrentUser currentUser = new CurrentUser();
+        final String currentUserEmail= currentUser.email();
 
-        String folder = currentUser.sanitizeEmail(currentUser.email()+"/");
+        String folder = new EmailProcessor().sanitizeEmail( currentUserEmail+"/");
         String photoName = "avatar.jpg";
         String baseUrl="gs://flash-bde01.appspot.com/avatars/";
         String refUrl=baseUrl+folder+photoName;
@@ -45,9 +48,11 @@ public class UploadPhoto {
                 user.setName(currentUser.getCurrentUser().getDisplayName());
                 user.setPhoto(url);
                 user.setUid(currentUser.uid());
-                String key = currentUser.sanitizeEmail(currentUser.email());
+                String key = new EmailProcessor().sanitizeEmail( currentUserEmail);
+              //   FirebaseDatabase.getInstance().getReference().push().setValue(user)
+                // FirebaseDatabase.getInstance().getReference().child("users").child(key).setValue(user);
                 //new Nodes().users().child(key).setValue(user);
-               // FirebaseDatabase.getInstance().getReference().child("users").child(key).setValue(user);
+
                 new Nodes().user(key).setValue(user);
 
 
