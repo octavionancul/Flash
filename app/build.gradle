@@ -26,7 +26,9 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.facebook.android:facebook-login:4.32.0'
     implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
-    implementation 'com.frosquivel:magicalcamera:5.0.5'
+    implementation('com.frosquivel:magicalcamera:5.0.5@aar') {
+        transitive = false;
+    }
     implementation 'com.google.firebase:firebase-storage:15.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     // FirebaseUI for Firebase Realtime Database

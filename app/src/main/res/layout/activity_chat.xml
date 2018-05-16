@@ -4,14 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".views.main.MainActivity"
-    tools:showIn="@layout/app_bar_main">
-
-    <fragment
-        android:id="@+id/chatsFragment"
-        android:name="cl.octavionancul.flash.views.main.chats.ChatsFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    tools:context=".views.chat.ChatActivity">
 
 </android.support.constraint.ConstraintLayout>
